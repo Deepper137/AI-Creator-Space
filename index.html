@@ -159,14 +159,14 @@
                 // ผู้ใช้ยังไม่ล็อกอิน
                 currentUser = null;
                 document.getElementById('loginSection').classList.remove('hidden');
-                document.getElementById('guestWelcome').classList.remove('hidden');
-                
-                document.getElementById('userProfileSection').classList.add('hidden');
-                document.getElementById('workspaceSection').classList.add('hidden');
-            }
-        });
-
-        function signInWithGoogle() {
+                const firebaseConfig = {
+  apiKey: "AIzaSyAVnpzRygtNmUwCu1e5D6IrDRqGm2WBm3E",
+  authDomain: "ai-creator-space.firebaseapp.com",
+  projectId: "ai-creator-space",
+  storageBucket: "ai-creator-space.firebasestorage.app",
+  messagingSenderId: "244453737942",
+  appId: "1:244453737942:web:7758ea8c90087aba769077"
+};
             auth.signInWithPopup(provider).catch((error) => {
                 console.error("Login Failed:", error);
                 alert("เกิดข้อผิดพลาดในการเข้าสู่ระบบค่ะ");
